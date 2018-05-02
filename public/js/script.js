@@ -9,9 +9,9 @@ let hiHats = [false, false, false, false, false, false, false, false,
 false, false, false, false, false, false, false, false];
 
 let rideCymbals = [false, false, false, false, false, false, false, false,
-false, false, false, false, false, false, false, false]
+false, false, false, false, false, false, false, false];
 
-function toggleDrum(instrument, indexNumber){
+const toggleDrum = function(instrument, indexNumber){
   if (instrument[indexNumber] === false){
     instrument[indexNumber] = true
   }
@@ -19,14 +19,14 @@ function toggleDrum(instrument, indexNumber){
 }
 
 
-function clear(instrument){
+const clear = function(instrument){
   for (let x = 0; x < instrument.length; x++){
    instrument[x] = false;
      }
      // return instrument
 }
 
-function invert(instrument){
+const invert = function(instrument){
   for (let x = 0; x < instrument.length; x++){
     if (instrument[x] === false){
       instrument[x] = true
