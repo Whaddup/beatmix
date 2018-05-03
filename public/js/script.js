@@ -13,6 +13,69 @@ false, false, false, false, false, false, false, false];
 
 
 const transmogrifier = function(inputString){
+  switch (inputString) {
+    case 'kicks':
+      return kicks;
+    case 'snares':
+      return snares;
+    case 'hiHats':
+      return hiHats;
+    case 'rideCymbals':
+      return rideCymbals;
+    default:
+      return;
+  }
+};
+
+
+const toggleDrum = function(instrumentString, indexNumber){
+let instrument = transmogrifier(instrumentString);
+
+if (instrument[indexNumber] === false){
+  instrument[indexNumber] = true
+}
+else {instrument[indexNumber] = false}
+}
+
+
+const clear = function(instrumentString){
+let instrument = transmogrifier(instrumentString);
+
+for (let x = 0; x < instrument.length; x++){
+   instrument[x] = false;
+     }
+     // return instrument
+}
+
+const invert = function(instrumentString){
+let instrument = transmogrifier(instrumentString);
+
+for (let x = 0; x < instrument.length; x++){
+    if (instrument[x] === false){
+      instrument[x] = true
+    }
+    else {instrument[x] = false}
+  }
+}
+
+
+
+/*
+// Drum Arrays
+let kicks = [false, false, false, false, false, false, false, false,
+false, false, false, false, false, false, false, false];
+
+let snares = [false, false, false, false, false, false, false, false,
+false, false, false, false, false, false, false, false];
+
+let hiHats = [false, false, false, false, false, false, false, false,
+false, false, false, false, false, false, false, false];
+
+let rideCymbals = [false, false, false, false, false, false, false, false,
+false, false, false, false, false, false, false, false];
+
+
+const transmogrifier = function(inputString){
 
 if (inputString = "kicks"){
   return kicks;
@@ -59,7 +122,7 @@ for (let x = 0; x < instrument.length; x++){
     else {instrument[x] = false}
   }
 }
-
+*/
 
 
 /*
